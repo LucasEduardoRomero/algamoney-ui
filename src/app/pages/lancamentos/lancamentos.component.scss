@@ -1,0 +1,31 @@
+nb-card {
+    padding: 25px;
+}
+
+.label {
+    padding-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    max-width: none!important;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.acoes {
+    display: flex;
+    justify-content: space-between;
+
+    button:first-of-type {
+        margin-right: 2px;
+    }
+}

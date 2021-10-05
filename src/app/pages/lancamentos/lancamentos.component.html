@@ -1,0 +1,71 @@
+<div class="fluid-container">
+    <div class="row">
+        <div class="col">
+            <h2>Lançamentos</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+        
+            <nb-card>
+                <nb-card-header><h5 class="h5">Filtros</h5></nb-card-header>
+                <nb-card-body>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <label for="description" class="label">Descrição</label>
+                            <input name="description" type="text" class="input" nbInput placeholder="Descrição">
+                        </div>
+
+                        <div class="col-4 form-group">
+                            <label for="vencimento" class="label">Vencimento</label>
+                            <input nbInput name="vencimento" class="input" placeholder="Selecione um intervalo de tempo" [nbDatepicker]="vencimentoPicker">
+                            <nb-rangepicker #vencimentoPicker></nb-rangepicker>                   
+                        </div>
+
+                        <div class="col" style="margin-top: auto">
+                            <div class="button-container">
+                                <button nbButton type="primary">Pesquisar</button>
+                            </div>
+                        </div>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+            <nb-card>
+                <nb-card-header><h5 class="h5">Listagem</h5></nb-card-header>
+                <nb-card-body>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="col">Pessoa</th>
+                                <th class="col">Descrição</th>
+                                <th class="col">Vencimento</th>
+                                <th class="col">Pagamento</th>
+                                <th class="col">Valor</th>
+                                <th class="col">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let element of elements">
+                                <td class="col">{{element.pessoa}}</td>
+                                <td class="col">{{element.descricao}}</td>
+                                <td class="col">{{element.vencimento | date: 'dd/MM/yyyy HH:mm'}}</td>
+                                <td class="col">{{element.pagamento | date: 'dd/MM/yyyy HH:mm'}}</td>
+                                <td class="col">{{element.valor}}</td>
+                                <td class="col">
+                                    <div class="acoes">
+                                        <button nbButton size="small" status="primary" nbTooltip="Editar"><nb-icon icon="edit-outline"></nb-icon></button>
+                                        <button nbButton size="small" status="primary" nbTooltip="Excluir"><nb-icon icon="trash-outline"></nb-icon></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+
+</div>
