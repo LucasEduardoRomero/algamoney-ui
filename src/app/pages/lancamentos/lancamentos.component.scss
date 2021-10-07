@@ -1,5 +1,14 @@
 nb-card {
     padding: 25px;
+
+    .table {
+        width: 100%;
+    }
+
+    .col-acoes {
+        width: 70px;
+        align-items: center;
+    }
 }
 
 .label {
@@ -23,9 +32,19 @@ nb-card {
 
 .acoes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     button:first-of-type {
         margin-right: 2px;
     }
+}
+
+.col-valor {
+    width: 120px;
+    text-align: right;
+}
+
+.col-data {
+    width: 120px;
+    text-align: center;
 }

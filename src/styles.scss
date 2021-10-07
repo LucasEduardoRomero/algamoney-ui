@@ -1,1 +1,17 @@
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+
+// Custom imports
+@import './styles/table';
+
+@include nb-install() {
+  @include nb-theme-global();
+
+  // install custom styles
+  @include algamoney-table();
+};
+
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap-grid.min.css';
+
